@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     
-    public function store(Request $request){
+    public function storeTask(Request $request){
 
         $task = new Task;
         $task->task=$request->task;
@@ -17,7 +17,7 @@ class TaskController extends Controller
 
         $data=Task::all();
 
-        return response()->json([$data]);
+        return response()->json([$data],200);
 
     }
 

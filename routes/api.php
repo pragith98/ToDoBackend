@@ -26,3 +26,5 @@ Route::get('/allTask',[TaskController::class, 'getAllTask']);
 Route::get('/getTask/{id}',[TaskController::class, 'getTask']);
 
 Route::put('/updateTask/{id}',[TaskController::class, 'updateTask']);
+
+Route::delete('/deleteTask/{id}',[TaskController::class, 'deleteTask']);

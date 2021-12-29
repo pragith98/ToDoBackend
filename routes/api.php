@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/store',[TaskController::class, 'storeTask']);
+
+Route::get('/allTask',[TaskController::class, 'getAllTask']);

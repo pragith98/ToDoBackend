@@ -21,6 +21,17 @@ class TaskController extends Controller
 
     }
 
+    public function getAllTask(){
+        $task=Task::all();
+
+        if(!$task){
+            return response()->json(['msg'=>'no task'],404);
+        }else{
+            return response()->json(['allTask'=>$task],200);
+        }
+        
+    }
+
 
 
 }

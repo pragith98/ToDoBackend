@@ -24,3 +24,5 @@ Route::post('/store',[TaskController::class, 'storeTask']);
 Route::get('/allTask',[TaskController::class, 'getAllTask']);
 
 Route::get('/getTask/{id}',[TaskController::class, 'getTask']);
+
+Route::put('/updateTask/{id}',[TaskController::class, 'updateTask']);

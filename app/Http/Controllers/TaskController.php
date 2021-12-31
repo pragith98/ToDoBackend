@@ -56,13 +56,14 @@ class TaskController extends Controller
         }
     }
 
-    public function statusToCompleted($id){
+    public function statusUpdate(Request $request,$id){
         $task=Task::find($id);
         if(!$task){
-            return response()->json(['msg'=>'task not found']);
+            return response()->json(['msg'=>'task not found'],404);
         }else{
-            $task->status="completed";
+            $task->status=$request->status;
             $task->save();
+            return response()->json(['msg'=>'task update successful'],200);
         }
     }
 

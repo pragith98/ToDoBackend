@@ -28,3 +28,5 @@ Route::get('/getTask/{id}',[TaskController::class, 'getTask']);
 Route::put('/updateTask/{id}',[TaskController::class, 'updateTask']);
 
 Route::delete('/deleteTask/{id}',[TaskController::class, 'deleteTask']);
+
+Route::put('/statusUpdate/{id}',[TaskController::class, 'statusUpdate']);
